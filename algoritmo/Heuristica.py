@@ -1,4 +1,4 @@
-class Euristica:
+class Heuristica:
     def __init__(self):
         self.graph = {
             'A': [('B', 7), ('C', 9), ('D', 8), ('E', 20)],
@@ -38,7 +38,7 @@ class Euristica:
                 parent[root2] = root1
                 rank[root1] += 1
 
-    def euristic(self):
+    def heuristic(self):
         route = []
         parent = {city: city for city in self.graph}
         rank = {city: 0 for city in self.graph}
@@ -60,5 +60,5 @@ class Euristica:
 
 
 if __name__ == '__main__':
-    euristica = Euristica()
-    print(euristica.euristic())
+    heuristica = Heuristica()
+    print(heuristica.heuristic())
